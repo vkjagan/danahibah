@@ -8,7 +8,7 @@ $active_menu = $active_menu ?? '';
 
     <!-- Brand -->
     <a href="<?= APP_URL ?>/index.php" class="sidebar-brand">
-        <div class="sidebar-brand-icon">D</div>
+        <img src="<?= APP_URL ?>/assets/images/logo.png" alt="Logo" style="width: 38px; height: 38px; object-fit: contain;">
         <div class="sidebar-brand-text">
             <div class="brand-name">DanaHibah™</div>
             <div class="brand-tagline">Secure · Amanah</div>

@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <!-- Logo -->
         <div class="login-logo">
-            <div class="logo-icon"><i class="bi bi-moon-stars-fill"></i></div>
+            <img src="assets/images/logo.png" alt="DanaHibah Logo" style="width: 85px; height: 85px; object-fit: contain; margin-bottom: 16px;">
             <h1>DanaHibah™</h1>
             <p>Secure · Transparent · Amanah</p>
         </div>

@@ -7,7 +7,17 @@ require_once __DIR__ . '/includes/db_connect.php';
 require_once __DIR__ . '/includes/functions.php';
 require_once __DIR__ . '/includes/auth.php';
 
-require_auth();
+start_session();
+if (!is_logged_in()) {
+    if ((isset($_GET['lang']) && $_GET['lang'] === 'ms') || (isset($_COOKIE['lang']) && $_COOKIE['lang'] === 'ms')) {
+        require __DIR__ . '/home_ms.php';
+    } else {
+        require __DIR__ . '/home.php';
+    }
+    exit;
+}
+
+check_session_timeout();
 
 $page_title  = 'Dashboard';
 $active_menu = 'dashboard';
