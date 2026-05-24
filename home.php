@@ -436,18 +436,73 @@ require_once __DIR__ . '/includes/config.php';
         .footer-contact-item { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; color: var(--text-main); font-weight: 600; }
         .footer-contact-icon { width: 42px; height: 42px; background: linear-gradient(135deg, rgba(201,168,76,0.2), rgba(201,168,76,0.1)); color: var(--gold-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; border: 1px solid rgba(201,168,76,0.4); }
 
+        /* ─── Laptop / Smaller Desktop (1024px - 1399px) ─── */
+        @media (max-width: 1399.98px) {
+            /* Make navbar items more compact so they never collide or wrap */
+            .navbar-brand { font-size: 1.5rem; gap: 10px; }
+            .navbar-brand img { width: 44px !important; height: 44px !important; }
+            .nav-link { padding: 0.5rem 0.8rem !important; font-size: 0.9rem; }
+            .btn-login { padding: 0.5rem 1.4rem; font-size: 0.9rem; }
+            
+            /* Scale hero typography and devices to fit perfectly in 2 columns */
+            .brand-text-large { font-size: 2.8rem; }
+            .hero-subheading { font-size: 1.2rem; }
+            .hero-title-main { font-size: clamp(2.2rem, 3vw, 3.2rem); }
+            .hero-desc-main { font-size: 1.05rem; margin-bottom: 2rem !important; }
+            .kenapa-title { font-size: 1.25rem; margin-bottom: 1.4rem; }
+            
+            .device-tall { width: 210px; height: 450px; padding: 18px; }
+            .device-small { width: 155px; height: 290px; padding: 14px; }
+            .gold-circle-badge { width: 115px; height: 115px; bottom: 40px; right: 5px; padding: 8px; }
+            .gold-circle-badge i { font-size: 1.8rem !important; }
+            .gold-circle-badge span { font-size: 0.65rem !important; }
+            .malaysian-badge { padding: 10px 18px; }
+            .malaysian-badge .fs-5 { font-size: 1.1rem !important; }
+        }
+
+        /* ─── Tablet & Mobile (below 992px) ─── */
         @media (max-width: 991.98px) {
+            /* Background layers for mobile/tablet */
+            .hero-section-custom { min-height: auto; padding-top: 100px; background-color: #122B25; }
             .hero-bg-top { flex-direction: column; }
-            .bg-light-left { width: 100% !important; height: 50% !important; }
-            .bg-mosque-right { width: 100% !important; height: 50% !important; }
-            .hero-curve-container { height: 60% !important; }
-            .gold-circle-badge { position: relative !important; right: auto !important; bottom: auto !important; margin: 20px auto 0; }
-            .devices-showcase-container { flex-direction: column; align-items: center !important; }
+            
+            /* Top half white for Hero Content, bottom half dark green for Why DanaHibah & Devices */
+            .bg-light-left { width: 100% !important; height: 520px !important; background-color: #F8FAFB; }
+            .bg-mosque-right { width: 100% !important; height: 350px !important; position: absolute; top: 520px; left: 0; opacity: 0.4; }
+            .bg-mosque-right img { object-position: center; }
+            
+            /* Adjust the curve position to sit exactly between the white hero content and the dark green Why DanaHibah section! */
+            .hero-curve-container { height: 180px !important; top: 440px !important; bottom: auto !important; }
+            
+            /* Spacing and layout adjustments for mobile/tablet stacking */
+            .hero-content-top { margin-bottom: 120px !important; text-align: center; }
+            .hero-content-top .d-flex { justify-content: center; }
+            .hero-desc-main { margin: 0 auto 2rem; }
+            .hero-content-top .gap-3 { justify-content: center; }
+            
+            .malaysian-badge { align-self: center !important; margin: 40px auto 30px; width: 100%; max-width: 320px; text-align: center; }
+            .malaysian-badge .d-flex { justify-content: center !important; }
+            .malaysian-badge .text-muted { text-align: center !important; }
+            
+            .devices-showcase-container { flex-direction: column; align-items: center !important; gap: 30px !important; margin-top: 30px; }
+            .gold-circle-badge { position: relative !important; right: auto !important; bottom: auto !important; margin: 10px auto 0; }
+            
             .section-padding { padding: 80px 0; }
             .cta-section { padding: 50px 35px; }
             .steps-flex-container { flex-direction: column; align-items: center; gap: 20px; }
             .step-arrow-wrapper { transform: rotate(90deg); padding: 15px 0; }
             .step-card-wrapper { width: 100%; max-width: 380px; }
+        }
+
+        /* ─── Small Mobile Phones (below 576px) ─── */
+        @media (max-width: 575.98px) {
+            .brand-text-large { font-size: 2.4rem; }
+            .hero-title-main { font-size: 2.2rem; }
+            .hero-subheading { font-size: 1.1rem; }
+            .section-title { font-size: 2rem; }
+            .cta-section { padding: 40px 24px; }
+            .bg-light-left { height: 560px !important; }
+            .hero-curve-container { top: 480px !important; }
         }
     </style>
 </head>
